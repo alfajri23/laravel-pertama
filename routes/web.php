@@ -11,9 +11,10 @@
 |
 */
 
-Route::get('/', function () {
+/* Route::get('/', function () {
     return view('welcome');
 });
+*/
 
 Route::post('/test','AuthController@tampil');
 
@@ -21,3 +22,15 @@ Route::get('/index', 'HomeController@index'
 );
 
 Route::get('/form', 'AuthController@form');
+
+Route::get('/admin', function () {
+    return view('admin.master');
+});
+
+Route::get('/',function() {
+    return view('admin.data');
+});
+
+Route::get('/data-tables',function() {
+    return view('admin.datatables');
+});
