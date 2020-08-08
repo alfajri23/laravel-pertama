@@ -16,13 +16,14 @@
 });
 */
 
-Route::post('/test','AuthController@tampil');
+/* Route::post('/test','AuthController@tampil');
 
 Route::get('/index', 'HomeController@index'
 );
 
 Route::get('/form', 'AuthController@form');
-
+*/
+/*
 Route::get('/admin', function () {
     return view('admin.master');
 });
@@ -34,3 +35,18 @@ Route::get('/',function() {
 Route::get('/data-tables',function() {
     return view('admin.datatables');
 });
+*/
+
+Route::get('/pertanyaan/create','PertanyaanController@create');
+
+Route::post('/pertanyaan','PertanyaanController@store');
+
+Route::get('/pertanyaan','PertanyaanController@index');
+
+Route::get('/pertanyaan/{id}','PertanyaanController@show');
+
+Route::get('/pertanyaan/{id}/edit','PertanyaanController@edit');
+
+Route::put('/pertanyaan/{id}','PertanyaanController@update');
+
+Route::delete('/pertanyaan/{id}','PertanyaanController@destroy');
